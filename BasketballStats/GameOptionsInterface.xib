@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GameOptionsInterface">
+            <rect key="frame" x="0.0" y="1" width="600" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGT-Lo-Jyq" customClass="RoundedButton">
+                    <rect key="frame" x="8" y="122" width="584" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="isM-kC-t53"/>
+                    </constraints>
+                    <state key="normal" title="Exit Game">
+                        <color key="titleColor" red="1" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="exitButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="NQK-2a-4U2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI3-B4-p5N" customClass="RoundedButton">
+                    <rect key="frame" x="8" y="64" width="584" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="mZD-1p-nW6"/>
+                    </constraints>
+                    <state key="normal" title="View Detailed Statistics">
+                        <color key="titleColor" red="1" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="viewDetailedStatsButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="FOd-vO-jPB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkd-z0-K0c" customClass="RoundedButton">
+                    <rect key="frame" x="8" y="8" width="584" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="fhM-YF-Fdk"/>
+                    </constraints>
+                    <state key="normal" title="Enter Next Period">
+                        <color key="titleColor" red="1" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="continueNextPeriodButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="9Xn-bK-g43"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="mkd-z0-K0c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="1hp-uY-ERn"/>
+                <constraint firstItem="VGT-Lo-Jyq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="4Ut-d1-Geh"/>
+                <constraint firstItem="VGT-Lo-Jyq" firstAttribute="top" secondItem="FI3-B4-p5N" secondAttribute="bottom" constant="8" id="7gC-42-bY9"/>
+                <constraint firstAttribute="trailing" secondItem="VGT-Lo-Jyq" secondAttribute="trailing" constant="8" id="Nuo-mI-Xs6"/>
+                <constraint firstItem="FI3-B4-p5N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="b1t-Jq-9Ki"/>
+                <constraint firstAttribute="bottom" secondItem="VGT-Lo-Jyq" secondAttribute="bottom" constant="8" id="e2O-AD-dt0"/>
+                <constraint firstItem="mkd-z0-K0c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="eKJ-Jr-0Tl"/>
+                <constraint firstAttribute="trailing" secondItem="FI3-B4-p5N" secondAttribute="trailing" constant="8" id="jSg-Ve-X0F"/>
+                <constraint firstItem="VGT-Lo-Jyq" firstAttribute="top" secondItem="FI3-B4-p5N" secondAttribute="bottom" constant="8" id="sdM-rr-Mdm"/>
+                <constraint firstAttribute="trailing" secondItem="mkd-z0-K0c" secondAttribute="trailing" constant="8" id="xNR-2e-hYS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="continueNextPeriodButton" destination="mkd-z0-K0c" id="Boo-qa-3cu"/>
+                <outlet property="exitButton" destination="VGT-Lo-Jyq" id="nAT-yn-w9f"/>
+                <outlet property="viewDetailedStatisticsButton" destination="FI3-B4-p5N" id="l3D-Z5-s0G"/>
+            </connections>
+            <point key="canvasLocation" x="598" y="627"/>
+        </view>
+    </objects>
+</document>

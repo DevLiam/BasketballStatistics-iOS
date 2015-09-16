@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PDFGameStatsView">
+            <rect key="frame" x="0.0" y="0.0" width="612" height="792"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Aw-ic-BCJ">
+                    <rect key="frame" x="304" y="8" width="300" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Lau-Ar-dP5"/>
+                        <constraint firstAttribute="width" constant="300" id="bgy-ug-dfo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Home Team Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-q4-aJQ">
+                    <rect key="frame" x="53" y="53" width="168" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Away Team Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-fT-OXL">
+                    <rect key="frame" x="53" y="77" width="168" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSw-mB-tgj">
+                    <rect key="frame" x="241" y="53" width="15" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsr-NF-4nb">
+                    <rect key="frame" x="241" y="77" width="15" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mQ-jY-OQe">
+                    <rect key="frame" x="53" y="96" width="36" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6r-5L-Edz">
+                    <rect key="frame" x="119" y="96" width="36" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwo-OQ-Ghg">
+                    <rect key="frame" x="53" y="112" width="60" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Rsr-NF-4nb" firstAttribute="leading" secondItem="QNz-fT-OXL" secondAttribute="trailing" constant="20" id="12M-p9-U5l"/>
+                <constraint firstItem="3Aw-ic-BCJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="9Ph-X9-OGD"/>
+                <constraint firstItem="Z6r-5L-Edz" firstAttribute="top" secondItem="QNz-fT-OXL" secondAttribute="bottom" constant="-2" id="EQ9-D8-dwe"/>
+                <constraint firstItem="QNz-fT-OXL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="53" id="EQy-l7-zIY"/>
+                <constraint firstItem="QNz-fT-OXL" firstAttribute="top" secondItem="ogI-q4-aJQ" secondAttribute="bottom" constant="3" id="Hfo-Gv-x8O"/>
+                <constraint firstAttribute="trailing" secondItem="3Aw-ic-BCJ" secondAttribute="trailing" constant="8" id="RVt-jU-ltO"/>
+                <constraint firstItem="9mQ-jY-OQe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="53" id="TRr-aM-DXf"/>
+                <constraint firstItem="iwo-OQ-Ghg" firstAttribute="top" secondItem="9mQ-jY-OQe" secondAttribute="bottom" constant="-5" id="ckN-LZ-8c8"/>
+                <constraint firstItem="iwo-OQ-Ghg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="53" id="emO-II-bRU"/>
+                <constraint firstItem="ogI-q4-aJQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="53" id="fLW-Ao-ShJ"/>
+                <constraint firstItem="cSw-mB-tgj" firstAttribute="leading" secondItem="ogI-q4-aJQ" secondAttribute="trailing" constant="20" id="fuu-rl-FhI"/>
+                <constraint firstItem="Z6r-5L-Edz" firstAttribute="leading" secondItem="9mQ-jY-OQe" secondAttribute="trailing" constant="30" id="kvq-NT-OhW"/>
+                <constraint firstItem="ogI-q4-aJQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="53" id="mB5-BS-NEs"/>
+                <constraint firstItem="cSw-mB-tgj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="53" id="n7s-KW-iPI"/>
+                <constraint firstItem="Rsr-NF-4nb" firstAttribute="top" secondItem="cSw-mB-tgj" secondAttribute="bottom" id="qga-2s-58J"/>
+                <constraint firstItem="9mQ-jY-OQe" firstAttribute="top" secondItem="QNz-fT-OXL" secondAttribute="bottom" constant="-2" id="uXp-kh-C5G"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="awayTeamNameLabel" destination="QNz-fT-OXL" id="Bo0-AT-u2B"/>
+                <outlet property="awayTeamScoreLabel" destination="Rsr-NF-4nb" id="DQG-BB-AJj"/>
+                <outlet property="gameDateLabel" destination="9mQ-jY-OQe" id="Pc5-uV-jid"/>
+                <outlet property="gameLocationLabel" destination="iwo-OQ-Ghg" id="AFK-RK-K1D"/>
+                <outlet property="gameTimeLabel" destination="Z6r-5L-Edz" id="ohD-mf-MJQ"/>
+                <outlet property="homeTeamNameLabel" destination="ogI-q4-aJQ" id="kjH-Ip-1Pd"/>
+                <outlet property="homeTeamScoreLabel" destination="cSw-mB-tgj" id="wSj-D4-gBe"/>
+                <outlet property="logoImageView" destination="3Aw-ic-BCJ" id="N2w-xn-Lox"/>
+            </connections>
+            <point key="canvasLocation" x="566" y="480"/>
+        </view>
+    </objects>
+</document>

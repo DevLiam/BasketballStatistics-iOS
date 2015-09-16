@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6GP-Bh-rWC" customClass="StatSelectorInterface">
+            <rect key="frame" x="0.0" y="5" width="600" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwM-ox-xI6">
+                    <rect key="frame" x="362" y="8" width="32" height="44"/>
+                    <state key="normal" image="reb_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="reboundButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="FQb-aq-uB1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlb-DH-mDX">
+                    <rect key="frame" x="439" y="8" width="32" height="44"/>
+                    <state key="normal" image="block_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="blockButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="qCx-fb-yIe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soe-3T-Vbs">
+                    <rect key="frame" x="111" y="8" width="32" height="44"/>
+                    <state key="normal" image="steal_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="stealButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="354-sA-Y9h"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99N-De-d8d">
+                    <rect key="frame" x="34" y="8" width="32" height="44"/>
+                    <state key="normal" image="turnover_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="turnoverButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="38K-NM-K7P"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHu-2k-HjE">
+                    <rect key="frame" x="516" y="8" width="32" height="44"/>
+                    <state key="normal" image="foul_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="foulButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="Hdy-82-Mog"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJz-ad-B6V">
+                    <rect key="frame" x="285" y="8" width="32" height="44"/>
+                    <state key="normal" image="shot_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shotButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="8D4-lr-jiz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk2-kd-MDP">
+                    <rect key="frame" x="208" y="8" width="32" height="44"/>
+                    <state key="normal" image="assist_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="assistButtonAction:" destination="6GP-Bh-rWC" eventType="touchUpInside" id="Vlr-Fy-EE0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="wlb-DH-mDX" firstAttribute="leading" secondItem="lwM-ox-xI6" secondAttribute="trailing" constant="45" id="2ys-p4-MeI">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstItem="eJz-ad-B6V" firstAttribute="leading" secondItem="Bk2-kd-MDP" secondAttribute="trailing" constant="45" id="62H-HO-koa">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="eJz-ad-B6V" secondAttribute="centerY" id="6QI-ef-dzT"/>
+                <constraint firstAttribute="centerY" secondItem="99N-De-d8d" secondAttribute="centerY" id="6yn-mc-Tgg"/>
+                <constraint firstItem="lwM-ox-xI6" firstAttribute="leading" secondItem="eJz-ad-B6V" secondAttribute="trailing" constant="45" id="CON-ZD-EnN">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstAttribute="centerX" secondItem="eJz-ad-B6V" secondAttribute="centerX" constant="-1" id="OVO-YW-pgo"/>
+                <constraint firstItem="oHu-2k-HjE" firstAttribute="leading" secondItem="wlb-DH-mDX" secondAttribute="trailing" constant="45" id="Zn6-mp-B88">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="Soe-3T-Vbs" secondAttribute="centerY" id="bK3-eH-Ecy"/>
+                <constraint firstAttribute="centerY" secondItem="Bk2-kd-MDP" secondAttribute="centerY" id="c0u-gb-HZ9"/>
+                <constraint firstAttribute="centerY" secondItem="wlb-DH-mDX" secondAttribute="centerY" id="fwU-0n-zi1"/>
+                <constraint firstItem="Bk2-kd-MDP" firstAttribute="leading" secondItem="Soe-3T-Vbs" secondAttribute="trailing" constant="45" id="jDI-ro-IGp">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="lwM-ox-xI6" secondAttribute="centerY" id="kk6-uU-OIO"/>
+                <constraint firstAttribute="centerY" secondItem="oHu-2k-HjE" secondAttribute="centerY" id="oJm-Ci-Rl6"/>
+                <constraint firstItem="Soe-3T-Vbs" firstAttribute="leading" secondItem="99N-De-d8d" secondAttribute="trailing" constant="45" id="xDk-xe-rIH">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="assistButton" destination="Bk2-kd-MDP" id="1d8-cy-f32"/>
+                <outlet property="blockButton" destination="wlb-DH-mDX" id="IcC-I7-7Jf"/>
+                <outlet property="foulButton" destination="oHu-2k-HjE" id="ITb-xM-UBr"/>
+                <outlet property="reboundButton" destination="lwM-ox-xI6" id="TiJ-uX-i1X"/>
+                <outlet property="shotButton" destination="eJz-ad-B6V" id="K6R-JL-sKf"/>
+                <outlet property="stealButton" destination="Soe-3T-Vbs" id="mmd-sA-yVP"/>
+                <outlet property="turnoverButton" destination="99N-De-d8d" id="9Q2-Q7-A3d"/>
+            </connections>
+            <point key="canvasLocation" x="546" y="511"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="assist_icon.png" width="32" height="44"/>
+        <image name="block_icon.png" width="32" height="44"/>
+        <image name="foul_icon.png" width="32" height="44"/>
+        <image name="reb_icon.png" width="32" height="44"/>
+        <image name="shot_icon.png" width="32" height="44"/>
+        <image name="steal_icon.png" width="32" height="44"/>
+        <image name="turnover_icon.png" width="32" height="44"/>
+    </resources>
+</document>

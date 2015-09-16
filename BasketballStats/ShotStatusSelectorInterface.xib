@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShotStatusSelectorInterface">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhW-WI-enc">
+                    <rect key="frame" x="295" y="19" width="10" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.1450980392" green="0.17254901959999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhO-zY-XXN">
+                    <rect key="frame" x="203" y="15" width="32" height="30"/>
+                    <state key="normal" image="miss_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="missButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="0RZ-Sw-D52"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkV-zm-yoI">
+                    <rect key="frame" x="365" y="15" width="38" height="30"/>
+                    <state key="normal" image="make_icon.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="makeButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="JnE-pk-Wtr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="DkV-zm-yoI" secondAttribute="centerY" id="62c-Cf-aEO"/>
+                <constraint firstItem="OhW-WI-enc" firstAttribute="leading" secondItem="yhO-zY-XXN" secondAttribute="trailing" constant="60" id="FOZ-fd-vaZ">
+                    <variation key="widthClass=compact" constant="30"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="yhO-zY-XXN" secondAttribute="centerY" id="QFO-TY-YBA"/>
+                <constraint firstAttribute="centerX" secondItem="OhW-WI-enc" secondAttribute="centerX" id="fTw-KT-HC8"/>
+                <constraint firstAttribute="centerY" secondItem="OhW-WI-enc" secondAttribute="centerY" constant="0.5" id="iIG-ks-t55"/>
+                <constraint firstItem="DkV-zm-yoI" firstAttribute="leading" secondItem="OhW-WI-enc" secondAttribute="trailing" constant="60" id="p8L-YK-9Uw">
+                    <variation key="widthClass=compact" constant="30"/>
+                </constraint>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="makeButton" destination="DkV-zm-yoI" id="3qu-CJ-nqq"/>
+                <outlet property="missButton" destination="yhO-zY-XXN" id="203-kc-wdl"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="make_icon.png" width="96" height="44"/>
+        <image name="miss_icon.png" width="96" height="44"/>
+    </resources>
+</document>

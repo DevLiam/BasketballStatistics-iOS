@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Game" representedClassName="Game" syncable="YES">
+        <attribute name="currentPeriod" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="defaultPeriodLength" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="gameStarted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="locationLatitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locationLongitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="numberOfPeriods" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="recordAwayTeamStats" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="recordHomeTeamStats" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="structureHalves" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="teams" optional="YES" toMany="YES" minCount="2" maxCount="2" deletionRule="Cascade" ordered="YES" destinationEntity="Team" inverseName="game" inverseEntity="Team" syncable="YES"/>
+    </entity>
+    <entity name="Period" representedClassName="Period" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="periodLength" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="periods" inverseEntity="Player" syncable="YES"/>
+        <relationship name="statistics" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Statistics" inverseName="period" inverseEntity="Statistics" syncable="YES"/>
+    </entity>
+    <entity name="Player" representedClassName="Player" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isPlaying" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="assistsTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="topAssists" inverseEntity="Team" syncable="YES"/>
+        <relationship name="blocksTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="topBlocks" inverseEntity="Team" syncable="YES"/>
+        <relationship name="periods" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Period" inverseName="player" inverseEntity="Period" syncable="YES"/>
+        <relationship name="reboundsTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="topRebounder" inverseEntity="Team" syncable="YES"/>
+        <relationship name="scorerTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="topScorer" inverseEntity="Team" syncable="YES"/>
+        <relationship name="stealsTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="topSteals" inverseEntity="Team" syncable="YES"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="players" inverseEntity="Team" syncable="YES"/>
+        <relationship name="turnoversTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="topTurnovers" inverseEntity="Team" syncable="YES"/>
+    </entity>
+    <entity name="Statistics" representedClassName="Statistics" syncable="YES">
+        <attribute name="assists" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="blocks" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="defensiveRebounds" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="efficiency" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="fieldGoalsAttempted" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="fieldGoalsMade" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="fouls" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="freeThrowsAttempted" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="freeThrowsMade" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="minutesPlayed" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="offensiveRebounds" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="steals" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="threeGoalsAttempted" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="threeGoalsMade" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <attribute name="turnovers" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
+        <relationship name="period" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Period" inverseName="statistics" inverseEntity="Period" syncable="YES"/>
+    </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES">
+        <attribute name="teamName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="game" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="teams" inverseEntity="Game" syncable="YES"/>
+        <relationship name="players" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Player" inverseName="team" inverseEntity="Player" syncable="YES"/>
+        <relationship name="topAssists" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="assistsTop" inverseEntity="Player" syncable="YES"/>
+        <relationship name="topBlocks" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="blocksTop" inverseEntity="Player" syncable="YES"/>
+        <relationship name="topRebounder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="reboundsTop" inverseEntity="Player" syncable="YES"/>
+        <relationship name="topScorer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="scorerTop" inverseEntity="Player" syncable="YES"/>
+        <relationship name="topSteals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="stealsTop" inverseEntity="Player" syncable="YES"/>
+        <relationship name="topTurnovers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="turnoversTop" inverseEntity="Player" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Game" positionX="-272" positionY="-141" width="128" height="210"/>
+        <element name="Period" positionX="252" positionY="36" width="128" height="105"/>
+        <element name="Player" positionX="207" positionY="-144" width="128" height="225"/>
+        <element name="Statistics" positionX="468" positionY="-99" width="128" height="285"/>
+        <element name="Team" positionX="-36" positionY="-144" width="128" height="180"/>
+    </elements>
+</model>
